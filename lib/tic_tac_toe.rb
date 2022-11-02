@@ -24,12 +24,12 @@ class TicTacToe
     end
 
     def input_to_index(index)
-        index = index.to_i
-        index  -= 1
+        integer_index = index.to_i
+        integer_index -= 1
     end 
 
-    def move(index, token)
-        @board[index]=token
+    def move(index, token = 'X')
+        @board[index] = token
     end 
 
     def position_taken? (index)
@@ -92,3 +92,6 @@ class TicTacToe
         puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
     end 
 end
+
+game1 = TicTacToe.new()
+puts game1.display_board
